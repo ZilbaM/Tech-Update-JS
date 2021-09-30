@@ -9,11 +9,10 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
     color:var(--dark-color)
 }
 .wrapper{
-    min-height:100vh;
+    min-height:130vh;
     min-width:100vw;
     background-color: var(--light-color);
 }
@@ -33,6 +32,7 @@ h1 {
     font-weight: 200;
     font-size: 3em;
     word-spacing: 5px;
+    font-family: 'Poppins', sans-serif;
 }
 .nav-list{
     height: 75px;
@@ -46,6 +46,7 @@ h1 {
     text-transform: uppercase;
     font-size: 2em;
     font-weight:300;
+    font-family: 'Poppins', sans-serif;
 }
 .nav-item{
     height:100%;
@@ -72,8 +73,49 @@ h2{
     border-bottom: 5px solid var(--dark-color);
     font-weight: 500;
     line-height: 50px;
+    font-family: 'Poppins', sans-serif;
 }
-
+h3{
+    width: 30vw;
+    font-size:2em;
+    border-bottom: 5px solid var(--dark-color);
+    font-weight: 500;
+    line-height: 50px;
+    margin-left: 30px;
+    font-family: 'Poppins', sans-serif;
+}
+pre{
+    max-width: 40%;
+}
+.code-double{
+    width: 100vw;
+    display:flex;
+    flex-direction: row;
+    margin-left: 30px;
+}
+.code-double pre:not(:first-of-type){
+    margin-left: 20px;
+}
+p{
+    font-family: 'Poppins', sans-serif;
+}
+.paragraph h3:first-of-type{
+    margin-top: 20px;
+}
 .paragraph *:nth-child(2){
     margin-top: 20px;
+}
+.paragraph:not(:first-of-type){
+    margin-top: 25px;
+}
+.output{
+    margin: 30px;
+}
+.entry-list{
+    list-style-type: square;
+    margin-left:30px;
+}
+.entry-list li{
+    font-family: 'Poppins', sans-serif;
+    margin-top:0 !important;
 }

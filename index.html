@@ -9,6 +9,7 @@
     <title>Tech Update - Basile MAILLE</title>
 </head>
 <body>
+    <script src="Prism/prism.js"></script>
     <div class="wrapper">
         <header>
             <h1>Tech Update</h1>
@@ -23,15 +24,47 @@
         <div class="main">
             <article class="paragraph intro">
                 <h2>Child Nodes</h2>
-                <p>ChildNodes is a read-only property in JavaScript that returns a shit ton of infos about the HTML childs of the targeted tag.</p>
-                <p>It has multiple uses</p>
+                <p><strong>ChildNodes</strong> is a read-only property in JavaScript that returns a shit ton of infos about the HTML childs of the targeted tag.</p>
+                <p>It basically allow you to get every JS and HTML related properties of the tag.</p>
             </article>
-            <article class="paragraph"></article>
+            <article class="paragraph">
+                <h2>How to use it</h2>
+                <p>The proper way to use <strong>ChildNodes</strong> is to first target an element with its <strong>class</strong>, its <strong>id</strong> or a <strong>querySelector</strong>.</p>
+                <p>Then, use an <strong>element.nodesChild</strong> to put the data in a variable</p>
+                <h3>Exemple</h3>
+                <div class="code-double">
+                <script type="text/plain" class="language-markup"><body>
+    <div class="parent">
+        <p class="child">Hello World !</p>
+    </div>
+</body></script>
+        <pre><code class="language-js">var parent = document.getElementsByClassName('parent')[0];
+//Or var parent = document.querySelector('.parent');
+//After the element is selected, we assign its childNodes to a new variable
+var nodes = parent.childNodes;
+console.log(nodes);
+</code></pre>
+                </div>
+                <h3>Output</h3>
+                <img class="output" src="img.jpg" alt="Output of code">
+                <p>As you can see above, the console.log returns an array with 3 entries : 2 texts and the child of the targeted.</p>
+                <p>The 2 texts are corresponding to the empty space between the <strong>&lt;div&gt;</strong> tag and the <strong>&lt;p&gt;</strong> tag.</p>
+                <p>When we unroll the second element of the array, we can see that it is an array too with a lot of entries</p>
+                <p>A few among them are :</p><br>
+                <ul class="entry-list">
+                    <li><strong>childNodes</strong>: You can see the childNodes of the child and so on</li>
+                    <li><strong>classList</strong>: an array with the classes of the element (it also contains a list of action you can do to the classList (Ex : toggle, add, remove, replace...))</li>
+                    <li>A list of every event and if there is an action linked to it with an <strong>addEventListener</strong></li>
+                    <li><strong>outerHTML</strong>: a string with the entirety of the tag (Ex : <strong>"&lt;p class=\"child\">Hello World !&lt;/p>"</strong>)</li>
+                    <li><strong>outerText</strong>: a string with the text inside the html tag (Ex: <strong>"Hello World !"</strong>) </li>
+                </ul>
+
+            </article>
             <article class="paragraph"></article>
             <article class="paragraph"></article>
         </div>
     </div>
 </body>
 <script src="script.js"></script>
-<script src="Prism/prism.js"></script>
+
 </html>
