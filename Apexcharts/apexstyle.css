@@ -1,20 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
 :root{
-    --dark-color: #023047;
-    --light-color: #8ecae6;
-    --medium-color: #219ebc;
+    --dark-color: #00051d;
+    --light-color: #d8f3dc;
+    --medium-color: #031366;
     --add-color: #ffb703;
+    --nav-color: #219ebc;
 }
-*:not(){
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    color:var(--dark-color)
+    color:var(--light-color)
 }
 .wrapper{
-    min-height:130vh;
+    min-height:300vh;
     min-width:100vw;
-    background-color: var(--light-color);
+    background-color: var(--dark-color);
 }
 header{
     width: 100vw;
@@ -41,7 +42,7 @@ h1 {
     list-style-type: none;
 }
 .nav-item a{
-    color: var(--medium-color);
+    color: var(--nav-color);
     text-decoration: none;
     text-transform: uppercase;
     font-size: 2em;
@@ -78,31 +79,47 @@ h2{
 h3{
     width: 30vw;
     font-size:2em;
-    border-bottom: 5px solid var(--dark-color);
     font-weight: 500;
     line-height: 50px;
     margin-left: 30px;
+    margin-bottom: 10px;
     font-family: 'Poppins', sans-serif;
 }
-pre{
+h4{
+    width: 20vw;
+    font-size:1.5em;
+    border-bottom: 5px solid var(--dark-color);
+    font-weight: 500;
+    line-height: 30px;
+    font-family: 'Poppins', sans-serif;
+}
+p{
+    font-family: 'Poppins', sans-serif;
+}
+article > pre{
     max-width: 40%;
 }
 .code-double{
-    width: 100vw;
+    width: 90vw;
     display:flex;
     flex-direction: row;
+    margin-left: 30px;
+    margin-top:20px;
+}
+
+.half{
+    width:40%;
+}
+.half:not(:first-of-type){
     margin-left: 30px;
 }
 .code-double pre:not(:first-of-type){
     margin-left: 20px;
 }
-p{
-    font-family: 'Poppins', sans-serif;
-}
 .paragraph h3:first-of-type{
     margin-top: 20px;
 }
-.paragraph *:nth-child(2){
+.paragraph > *:nth-child(2){
     margin-top: 20px;
 }
 .paragraph:not(:first-of-type){
@@ -118,4 +135,16 @@ p{
 .entry-list li{
     font-family: 'Poppins', sans-serif;
     margin-top:0 !important;
+}
+.small{
+    width:30%;
+}
+.apexcharts-theme-light{
+    background: var(--dark-color) !important;
+}
+.apexcharts-tooltip-title{
+    background: var(--medium-color) !important;
+}
+.warning{
+    color: var(--add-color);
 }

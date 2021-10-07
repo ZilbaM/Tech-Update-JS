@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="apexstyle.css">
+    <link rel="stylesheet" href="../Prism/prism.css">
+    <title>Document</title>
+</head>
+<body>
+    <script src="../Prism/prism.js"></script>
+    <div class="wrapper">
+        <header>
+            <h1>Tech Update</h1>
+            <nav>
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="../index.html">Child Nodes</a></li>
+                    <li class="nav-item"><a href="#">ApexchartsJS</a></li>
+                    <li class="nav-item"><a href="#">To be continued</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div class="main">
+            <article class="paragraph intro">
+                <h2>Apexcharts JS</h2>
+                <p><strong>Apexcharts JS</strong> is a JavaScript library that allows you to create charts of multiple types to create a visual indicators of data on your web page.</p>
+            </article>
+            <article class="paragraph">
+                <h2>Set up</h2>
+                <p>There are 2 ways to install ApexchartsJS on your website. The first is by installing via <strong>npm</strong>.</p>
+                <code class="lang-js">
+                    npm install apexcharts --save
+                </code></pre>
+                <p>Usage:</p>
+                <code class="lang-js">
+                    import ApexCharts from 'apexcharts'
+                </code></pre>
+                <p>The other way to install it is by including it directly into your <strong>HTML</strong>:</p>
+                <pre><code class="lang-markup">&lt;script src="https://cdn.jsdelivr.net/npm/apexcharts">&lt;/script></code></pre>
+            </article>
+            <article class="paragraph">
+                <h2>Usage</h2>
+                <p>Creating a chart is really easy. First you create an empty div tag with an id in your HTML.</p>
+                <pre><code class="lang-markup">&lt;div id="chart">&lt;/div></code></pre>
+                <p>Then, in your Javascript file, you write your charts parameters :</p>
+                <div class="code-double">
+                    <div class="half">
+                        <h4>Code</h4>
+                        <pre><code class="lang-js">var options = {
+    chart: {
+      type: 'line'
+    },
+    series: [{
+      name: 'sales',
+      data: [30,40,35,50,49,60,70,91,125]
+    }],
+    xaxis: {
+      categories: [1991,1992,1993,1994,1995,1996,1997, 1998,1999]
+    }
+  }
+  
+  var chart = new ApexCharts(document.querySelector("#chart"), options);
+  
+  chart.render();</code></pre>
+  <ul class="entry-list">
+    <li><strong>chart :</strong> it only contains the type of chart you want. See below for more chart types.</li>
+    <li><strong>series : </strong>The series is a set of data. You may have single or multiple data series.</li>
+    <li><strong>xaxis : </strong>In xaxis, you put the categories or values you want on the horizontal axis.</li>
+
+</ul>
+                </div>
+                <div class="half">
+                    <h4>Ouput</h4>
+                    <div id="firstChart"></div>
+                </div>
+            </div>
+        </article>
+        <article class="paragraph">
+            <h2>Parameters</h2>
+            <h3>Chart type :</h3>
+            <p>You can easily change the chart type just by changing the type argument in the script :</p>
+            <div class="code-double">
+                <div class="half">
+                    <h4>Code</h4>
+                    <pre><code class="lang-js">chart: {
+    type: 'bar'
+}</code></pre>
+            </div>
+            <div class="half small">
+                <h4>Ouput</h4>
+                <div id="firstChartBar"></div>
+            </div>
+            </div>
+            <h3>Paired Values</h3>
+            <p>You can have single or multiple data series. </p>
+            <div class="code-double">
+        <div class="half">
+            <h4>Code</h4>
+        <pre><code class="lang-js">series: [{
+  name: 'sales',
+  data: [30,40,35,50,49,60,70,91,125]
+},{
+  name: 'viewers',
+  data: [25,36,90,60,65,55,68,100,115]
+}];</code></pre>
+        <p class="warning"><img src="../icons/warning.png" style="width:12px;"> There are multiple ways to add other series to your chart. However, they each require technical syntax. Make sure to check the official documentation of <a href="https://apexcharts.com/docs/series/">Apexcharts JS</a> before you do anything, to be certain you know the right way to do what you want.</p>
+        </div>
+
+        <div class="half small">
+            <h4>Output</h4>
+            <div id="dblSerieChart"></div>
+        </div>
+    </div>  
+        </article>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script src="apexscript.js"></script>
+</body>
+</html>
