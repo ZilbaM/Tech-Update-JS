@@ -12,10 +12,14 @@
     box-sizing: border-box;
     color:var(--dark-color)
 }
+body{
+    overflow-x: hidden;
+}
 .wrapper{
     min-height:130vh;
     min-width:100vw;
     background-color: var(--light-color);
+    overflow-x: hidden;
 }
 header{
     width: 100vw;
