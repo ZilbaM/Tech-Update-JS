@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,6 +9,7 @@
     <link rel="stylesheet" href="../Prism/prism.css">
     <title>Document</title>
 </head>
+
 <body>
     <script src="../Prism/prism.js"></script>
     <div class="wrapper">
@@ -24,11 +26,13 @@
         <div class="main">
             <article class="paragraph intro">
                 <h2>Apexcharts JS</h2>
-                <p><strong>Apexcharts JS</strong> is a JavaScript library that allows you to create charts of multiple types to create a visual indicators of data on your web page.</p>
+                <p><strong>Apexcharts JS</strong> is a JavaScript library that allows you to create charts of multiple
+                    types to create a visual indicators of data on your web page.</p>
             </article>
             <article class="paragraph">
                 <h2>Set up</h2>
-                <p>There are 2 ways to install ApexchartsJS on your website. The first is by installing via <strong>npm</strong>.</p>
+                <p>There are 2 ways to install ApexchartsJS on your website. The first is by installing via
+                    <strong>npm</strong>.</p>
                 <code class="lang-js">
                     npm install apexcharts --save
                 </code></pre>
@@ -60,62 +64,102 @@
     }
   }
   
-  var chart = new ApexCharts(document.querySelector("#chart"), options);
+var chart = new ApexCharts(document.querySelector("#chart"), options);
   
-  chart.render();</code></pre>
-  <ul class="entry-list">
-    <li><strong>chart :</strong> it only contains the type of chart you want. See below for more chart types.</li>
-    <li><strong>series : </strong>The series is a set of data. You may have single or multiple data series.</li>
-    <li><strong>xaxis : </strong>In xaxis, you put the categories or values you want on the horizontal axis.</li>
+chart.render();</code></pre>
+                        <ul class="entry-list">
+                            <li><strong>chart :</strong> it only contains the type of chart you want. See below for more
+                                chart types.</li>
+                            <li><strong>series : </strong>The series is a set of data. You may have single or multiple
+                                data series.</li>
+                            <li><strong>xaxis : </strong>In xaxis, you put the categories or values you want on the
+                                horizontal axis.</li>
 
-</ul>
+                        </ul>
+                    </div>
+                    <div class="half">
+                        <h4>Ouput</h4>
+                        <div id="firstChart"></div>
+                    </div>
                 </div>
-                <div class="half">
-                    <h4>Ouput</h4>
-                    <div id="firstChart"></div>
-                </div>
-            </div>
-        </article>
-        <article class="paragraph">
-            <h2>Parameters</h2>
-            <h3>Chart type :</h3>
-            <p>You can easily change the chart type just by changing the type argument in the script :</p>
-            <div class="code-double">
-                <div class="half">
-                    <h4>Code</h4>
-                    <pre><code class="lang-js">chart: {
+            </article>
+            <article class="paragraph">
+                <h2>Parameters</h2>
+                <h3>Chart type :</h3>
+                <p>You can easily change the chart type just by changing the type argument in the script :</p>
+                <div class="code-double">
+                    <div class="half">
+                        <h4>Code</h4>
+                        <pre><code class="lang-js">chart: {
     type: 'bar'
 }</code></pre>
-            </div>
-            <div class="half small">
-                <h4>Ouput</h4>
-                <div id="firstChartBar"></div>
-            </div>
-            </div>
-            <h3>Paired Values</h3>
-            <p>You can have single or multiple data series. </p>
-            <div class="code-double">
-        <div class="half">
-            <h4>Code</h4>
-        <pre><code class="lang-js">series: [{
+                    </div>
+                    <div class="half small">
+                        <h4>Ouput</h4>
+                        <div id="firstChartBar"></div>
+                    </div>
+                </div>
+                <h3>Paired Values</h3>
+                <p>You can have single or multiple data series. </p>
+                <div class="code-double">
+                    <div class="half">
+                        <h4>Code</h4>
+                        <pre><code class="lang-js">series: [{
   name: 'sales',
   data: [30,40,35,50,49,60,70,91,125]
 },{
   name: 'viewers',
   data: [25,36,90,60,65,55,68,100,115]
 }];</code></pre>
-        <p class="warning"><img src="../icons/warning.png" style="width:12px;"> There are multiple ways to add other series to your chart. However, they each require technical syntax. Make sure to check the official documentation of <a href="https://apexcharts.com/docs/series/">Apexcharts JS</a> before you do anything, to be certain you know the right way to do what you want.</p>
-        </div>
+                        <p class="warning"><img src="../icons/warning.png" style="width:12px;"> There are multiple ways
+                            to add other series to your chart. However, they each require technical syntax. Make sure to
+                            check the official documentation of <a href="https://apexcharts.com/docs/series/">Apexcharts
+                                JS</a> before you do anything, to be certain you know the right way to do what you want.
+                        </p>
+                    </div>
 
-        <div class="half small">
-            <h4>Output</h4>
-            <div id="dblSerieChart"></div>
-        </div>
-    </div>  
-        </article>
+                    <div class="half small">
+                        <h4>Output</h4>
+                        <div id="dblSerieChart"></div>
+                    </div>
+                </div>
+                <h3>Styling</h3>
+                <p>The styling of charts can be done two ways : in the <strong>settings of the chart</strong> in the <strong>JS</strong> script, or via <strong>CSS</strong> styling by overriding the library styling. We recommand using the first way as much as possible before using the CSS overriding as there are some properties that are hard to modify with CSS like the chart stroke width.</p>
+                <h4 class="notdouble">By using the library settings</h4>
+                <p>If you want to use the library settings, you can find all the properties to add to your script <a href="https://apexcharts.com/docs/colors/#">here</a>.</p>
+                <h4 class="notdouble">By overriding the library with CSS</h4>
+                <p>The library uses inline styling to design their charts. If you want to override the library styling with CSS, you need to add !important to every styling property you use.</p>
+                </p>
+            </article>
+            <article class="paragraph">
+                <h2>Chart examples</h2>
+                <p>Here are a few examples of what can be done with ApexchartsJS.</p>
+                <div class="cGallery">
+                    <div class="cList">
+                        <div id="cGallery1"></div>
+                        <p class="cTitle">All 3 types of line charts : <strong>straight</strong>, <strong>smooth</strong> and <strong>stepline</strong>.</p>
+                    </div>
+                    <div class="cList">
+
+                        <div id="cGallery2"></div>
+                        <p class="cTitle"><strong>Candlestick</strong> price chart</p>
+                    </div>
+                    <div class="cList">
+
+                        <div id="cGallery3"></div>
+                        <p class="cTitle"><strong>Pie</strong> Chart</p>
+                    </div>
+                    <div class="cList">
+
+                        <div id="cGallery4"></div>
+                        <p class="cTitle"><strong>Donut</strong> Chart</p>
+                    </div>
+                </div>  
+            </article>
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
     <script src="apexscript.js"></script>
 </body>
+
 </html>
